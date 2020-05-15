@@ -39,7 +39,7 @@ public class RegisterActivity extends AppCompatActivity {
     public void clickRegister(View view) {
         InputMethodManager imm = (InputMethodManager) this.getSystemService(Activity.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(view.getWindowToken(),0);
-        
+
         final EditText emailEditText = findViewById(R.id.email_editText_register);
         email = emailEditText.getText().toString();
         final EditText passwordEditText = findViewById(R.id.password_editText_register);
