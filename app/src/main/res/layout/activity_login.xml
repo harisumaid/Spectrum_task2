@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_login_page"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/firebase_logo_login"
+        android:layout_width="177dp"
+        android:layout_height="161dp"
+        android:layout_marginVertical="24dp"
+        android:src="@drawable/firebase"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/page_title_login"/>
+
+    <TextView
+        android:id="@+id/page_title_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="18dp"
+        android:text="WELCOME"
+        android:textAllCaps="true"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firebase_logo_login" />
+
+    <EditText
+        android:id="@+id/email_editText_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ENTER E-MAIL"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/page_title_login"
+        />
+    <EditText
+        android:id="@+id/password_editText_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ENTER PASSWORD"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_editText_login"
+        android:inputType="textPassword"
+        />
+
+    <Button
+        android:id="@+id/activity_submit_button_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/gradient_button_sumbit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password_editText_login"
+        app:layout_constraintVertical_bias="0.084"
+        android:textColor="@color/facebook_button"
+        android:onClick="clickLogin"
+        android:text="LOGIN">
+    </Button>
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/loading_login"
+        android:layout_width="126dp"
+        android:layout_height="126dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="32dp"
+        android:visibility="gone"
+        style="?android:attr/progressBarStyleLarge"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password_editText_login"
+        app:layout_constraintVertical_bias="0.421" />
+
+    <TextView
+        android:id="@+id/newuser_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New User?Register Here"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        android:onClick="toRegister"
+        android:paddingHorizontal="8dp"
+        android:paddingTop="14dp"
+        />
+    <TextView
+        android:id="@+id/forgot_password_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        android:paddingHorizontal="8dp"
+        android:paddingTop="14dp"
+        android:onClick="resetPassword"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

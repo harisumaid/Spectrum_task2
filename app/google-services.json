@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "211477988119",
+    "firebase_url": "https://spectrum-task2.firebaseio.com",
+    "project_id": "spectrum-task2",
+    "storage_bucket": "spectrum-task2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:211477988119:android:26b4ee71a83e954cd1ad52",
+        "android_client_info": {
+          "package_name": "com.example.spectrum_task2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "211477988119-296er3oejohad8a76cpsqc9tsa4rcdjl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVFLIsKkLSQzmjEWyCJAGqGJxMFubaJOc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "211477988119-296er3oejohad8a76cpsqc9tsa4rcdjl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

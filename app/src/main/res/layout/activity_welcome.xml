@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradient_login_page">
+
+    <ImageView
+        android:id="@+id/firebase_logo_welcome"
+        android:layout_width="177dp"
+        android:layout_height="161dp"
+        android:layout_marginVertical="24dp"
+        android:src="@drawable/firebase"
+        app:layout_constraintBottom_toTopOf="@id/page_title_welcome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/page_title_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="18dp"
+        android:text="text"
+        android:textAllCaps="true"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firebase_logo_welcome" />
+
+    <Button
+        android:id="@+id/message_welcome"
+        android:background="@drawable/background_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:layout_marginTop="84dp"
+        android:text="MESSAGE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/page_title_welcome"
+        android:drawableLeft="@drawable/message_icon"
+        android:paddingLeft="8dp"
+        android:onClick="messageClicked"
+        />
+
+    <Button
+        android:id="@+id/phone_welcome"
+        android:background="@drawable/background_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PHONE"
+        android:layout_margin="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/message_welcome"
+        android:paddingLeft="8dp"
+        android:drawableLeft="@drawable/call_icon"
+        android:onClick="phoneClicked"
+        />
+
+    <Button
+        android:id="@+id/browser_welcome"
+        android:background="@drawable/background_browser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BROWSER"
+        android:layout_margin="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phone_welcome"
+        android:paddingLeft="8dp"
+        android:drawableLeft="@drawable/browser_icon"
+        android:onClick="browserClicked"
+        />
+
+    <Button
+        android:id="@+id/facebook_welcome"
+        android:background="@drawable/background_facebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:layout_marginTop="20dp"
+        android:text="FACEBOOK"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/browser_welcome"
+        android:paddingLeft="40dp"
+        android:onClick="facebookClicked"
+        />
+
+    <Button
+        android:id="@+id/instagram_welcome"
+        android:background="@drawable/background_instagram"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:layout_marginTop="68dp"
+        android:paddingLeft="40dp"
+        android:text="INSTAGRAM"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/facebook_welcome"
+        android:onClick="instagramClicked"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
