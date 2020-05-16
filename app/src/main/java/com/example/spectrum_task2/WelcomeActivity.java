@@ -23,8 +23,6 @@ public class WelcomeActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
-        TextView pageTitle = findViewById(R.id.page_title_welcome);
-        pageTitle.setText("WELCOME");
         getSupportActionBar().hide();
     }
 

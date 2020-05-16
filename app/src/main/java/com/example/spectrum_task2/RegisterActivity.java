@@ -27,6 +27,8 @@ public class RegisterActivity extends AppCompatActivity {
     String password;
     private FirebaseAuth mAuth;
     ContentLoadingProgressBar progressBar;
+    Button submit ;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,9 +36,11 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
         getSupportActionBar().hide();
         progressBar=findViewById(R.id.loading_register);
+        submit = findViewById(R.id.activity_submit_button_register);
     }
 
     public void clickRegister(View view) {
+        submit.setClickable(false);
         InputMethodManager imm = (InputMethodManager) this.getSystemService(Activity.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(view.getWindowToken(),0);
 
@@ -64,7 +68,7 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             });
         }
-
+        submit.setClickable(true);
 
     }
 

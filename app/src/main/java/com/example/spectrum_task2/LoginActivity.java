@@ -29,18 +29,21 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     TextView warningLogin;
     ContentLoadingProgressBar progressBar;
+    Button submit;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         mAuth = FirebaseAuth.getInstance();
+        submit = findViewById(R.id.activity_submit_button_login);
         getSupportActionBar().hide();
         progressBar = findViewById(R.id.loading_login);
         progressBar.hide();
     }
 
     public void clickLogin(View view) {
+        submit.setClickable(false);
         InputMethodManager imm = (InputMethodManager) this.getSystemService(Activity.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(view.getWindowToken(),0);
         final EditText emailEditText = findViewById(R.id.email_editText_login);
@@ -67,6 +70,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
             });
         }
+        submit.setClickable(true);
     }
 
     private void onLoginComplete() {

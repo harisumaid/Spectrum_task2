@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -20,6 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class ResetPasswordActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     ContentLoadingProgressBar progressBar;
+    Button submit;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,9 +29,11 @@ public class ResetPasswordActivity extends AppCompatActivity {
         setContentView(R.layout.activity_reset_password);
         getSupportActionBar().hide();
         mAuth = FirebaseAuth.getInstance();
+        submit = findViewById(R.id.sumbit_reset_button);
     }
 
     public void resetPassword(View view) {
+        submit.setClickable(false);
         InputMethodManager imm = (InputMethodManager) this.getSystemService(Activity.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(view.getWindowToken(),0);
         final EditText emailEditText = findViewById(R.id.reset_email_editText);
@@ -55,9 +59,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Email Id can't be empty \n Please enter a valid email id", Toast.LENGTH_SHORT).show();
         }
-
-
-
+        submit.setClickable(true);
     }
 
     private void getBackToLogin() {
